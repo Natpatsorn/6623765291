@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.NewPage1"
+             Title="NewPage1">
+    <StackLayout
+        BackgroundColor="WhiteSmoke">
+        <Label 
+            Text="Page 1"
+            FontSize="16"
+            TextColor="DarkSeaGreen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10" />
+        <Label 
+            Text="Natpatsorn Kaewchaichalermpol"
+            FontSize="28"
+            TextColor="Purple"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="15" />
+        <Label 
+            Text="6623765291"
+            FontSize="24"
+            TextColor="Purple"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="15" />
+        <Button
+            Text="Go to Page 2"
+            Clicked="GoToPage2"
+            Background="DeepPink"
+            VerticalOptions="End" 
+            Margin="20,10" />
+        <Button
+            Text="Go to Page 3"
+            Clicked="GoToPage3"
+            Background="DeepPink"
+            VerticalOptions="End" 
+            Margin="20,10" />
+    </StackLayout>
+
+</ContentPage>

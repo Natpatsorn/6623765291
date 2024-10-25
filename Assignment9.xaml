@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment.Assignment9"
+             Title="Assignment9"
+             BackgroundColor="#FFBFD0F0">
+    <Grid Padding="10" Margin="10" RowSpacing="10" VerticalOptions="Start">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/> <!--title-->
+            <RowDefinition Height="*"/> <!-- gender -->
+            <RowDefinition Height="*"/> <!-- gender button -->
+            <RowDefinition Height="*"/> <!-- age -->
+            <RowDefinition Height="*"/> <!--age entry -->
+            <RowDefinition Height="*"/> <!-- height,weight -->
+            <RowDefinition Height="*"/> <!-- h,w entry -->
+            <RowDefinition Height="*"/> <!--Calculate-->
+            <RowDefinition Height="*"/> <!--Your BMI-->
+            <RowDefinition Height="*"/> <!--Progress Bar-->
+            <RowDefinition Height="*"/> <!-- BMI -->
+            <RowDefinition Height="*"/> <!-- classification -->
+            <RowDefinition Height="*"/> <!-- healthy bmi -->
+            <RowDefinition Height="*"/> <!-- idealweight -->
+            <RowDefinition Height="*"/> <!-- Suggest -->
+            <RowDefinition Height="Auto"/> <!-- Suggest Message -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Title -->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+            Text ="BMI Calculator"
+            FontSize="Title"
+            TextColor="#FFF003A5"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+        </Label>
+
+        <!-- Gender -->
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+            Text="Gender"
+            FontSize="Subtitle"
+            TextColor="#FF1225F4"
+            HorizontalOptions="Start"
+            VerticalOptions="Center">
+        </Label>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+            x:Name="GenderMale"
+            BackgroundColor="#FF0E81ED"
+            Text="Male"
+            TextColor="#FF050004">
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
+            x:Name="GenderFemale"
+            BackgroundColor="#FFF459EC"
+            Text="Female"
+            TextColor="#FF100300">
+        </Button>
+
+        <!-- Age -->
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"
+            Text="Ages"
+            FontSize="Subtitle"
+            TextColor="#FFF70188">
+        </Label>
+        <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4"
+            x:Name="EntryAge"
+            BackgroundColor="#FFE7F782"
+            PlaceholderColor="#FF05020C"
+            Placeholder="Ages / Years"
+            TextColor="#FF030008">
+        </Entry>
+
+        <!-- Height , Weight -->
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+            Text="Height"
+            FontSize="Subtitle"
+            TextColor="#FF4C1D99">
+        </Label>
+        <Label Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"
+            Text="Weight"
+            FontSize="Subtitle"
+            TextColor="#FF4C1D99">
+        </Label>
+        <Entry Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+            x:Name="EntryHeight"
+            BackgroundColor="#FFA8EAFC"
+            PlaceholderColor="#FF0C0107"
+            Placeholder="Height / cm"
+            TextColor="#FF05000D">
+        </Entry>
+        <Entry Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"
+            x:Name="EntryWeight"
+            BackgroundColor="#FFB0E9F9"
+            PlaceholderColor="#FF080105"
+            Placeholder="Weight / Kg"
+            TextColor="#FF080213">
+        </Entry>
+
+        <!-- Calculate -->
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4"
+            x:Name="CalulateButton"
+            Text="Calculate Your BMI"
+            TextColor="#FF020009"
+            Background="#FFFFB9F6"
+            Clicked="CalulateButton_Clicked">
+        </Button>
+
+        <!-- BMI Result -->
+        <Label Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4"
+            Text="Your BMI"
+            FontSize="Subtitle"
+            TextColor="#FF9101C1">
+        </Label>
+
+        <ProgressBar Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4"
+            x:Name="BMIProgressBar"
+            HeightRequest="20"
+            Progress="0"
+            ProgressColor="#FF9101C1">
+        </ProgressBar>
+
+        <Label Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3"
+            Text="Your BMI is"
+            FontSize="Body"
+            TextColor="#FF9101C1">
+        </Label>
+        <Label Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="1"
+            x:Name="UserBMI"
+            Text="-"
+            FontSize="Body"
+            TextColor="#FF9101C15">
+        </Label>
+
+        <Label Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3"
+            Text="Classification"
+            FontSize="Body"
+            VerticalTextAlignment="Center"
+            TextColor="#FF9101C1">
+        </Label>
+        <Label Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="1"
+            x:Name="Usertype"
+            Text="-"
+            FontSize="Body"
+            TextColor="# FF9101C15">
+        </Label>
+
+        <Label Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3"
+            Text="Healthy BMI range"
+            FontSize="Body"
+            VerticalTextAlignment="Center"
+            TextColor="#FF9101C1">
+        </Label>
+        <Label Grid.Row="12" Grid.Column="3" Grid.ColumnSpan="1"
+            x:Name="IdealBMI"
+            Text="-"
+            FontSize="Body"
+            TextColor="#FF9101C1">
+        </Label>
+
+        <Label Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3"
+            Text="Healthy weight for Your Height"
+            FontSize="Body"
+            VerticalTextAlignment="Center"
+            TextColor="#FF9101C1">
+        </Label>
+        <Label Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="1"
+            x:Name="IdealWeight4User"
+            Text="-"
+            FontSize="Body"
+            TextColor="#FF9101C1">
+        </Label>
+
+        <Label Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="4"
+            Text="Suggestion"
+            FontSize="Body"
+            TextColor="#FF9101C1"
+            VerticalTextAlignment="Center">
+        </Label>
+        <Label Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4"
+            x:Name="BMISuggestionMessage"
+            Text="-"
+            FontSize="Body"
+            TextColor="#FF9101C1">
+        </Label>
+    </Grid>
+</ContentPage>

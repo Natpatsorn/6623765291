@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment.Assignment8"
+             Title="Assignment8"
+             Background="pink">
+    <VerticalStackLayout Padding="20" Spacing="12">
+        <Label 
+            Text="Register Form"
+            FontSize="Subtitle"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            TextColor="purple">
+    
+    <!-- Name -->        
+        </Label>
+        <Label
+            Text="Name"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <Entry
+            x:Name="EntryName"
+            Background="#E9E4D0"
+            Placeholder="Please entry Your Name"
+            TextColor="purple">
+        </Entry> 
+    
+    <!-- Email -->
+        <Label
+            Text="Email"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <Entry
+            x:Name="EntryEmail"
+            Background="#E9E4D0"
+            Placeholder="Please entry Your Email"
+            TextColor="purple">
+        </Entry>
+    
+    <!-- Date of Birth -->
+        <Label
+            Text="Date of Birth"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <DatePicker
+            x:Name="DatePicker"
+            TextColor="purple">
+        </DatePicker>
+    
+    <!-- Gender -->
+        <Label
+            Text="Gender"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <HorizontalStackLayout Spacing="30">
+            <RadioButton
+                x:Name="M"
+                GroupName="Gender"
+                Content="Male"
+                Value="M">
+            </RadioButton>
+            <RadioButton
+                x:Name="F"
+                GroupName="Gender"
+                Content="Female"
+                Value="F">
+            </RadioButton>
+        </HorizontalStackLayout>
+
+    <!-- Agree -->
+        <Label
+            Text="Agree to Teams and Conditions"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <Switch
+            x:Name="EntryAgree"
+            IsToggled="True"
+            OnColor="purple"
+            ThumbColor="White"
+            Toggled="EntryAgree_Toggled">
+        </Switch>
+        <Label
+            x:Name="EntrySwitchValue"
+            Text="Agree : Yes"
+            TextColor="purple">
+        </Label>
+        
+    <!-- Experience -->
+        <Label
+            Text="Experience (Years)"
+            FontSize="Header"
+            TextColor="purple">
+        </Label> 
+        <Slider
+            x:Name="EntryExperience"
+            Minimum="0"
+            Maximum="20"
+            ThumbColor="purple"
+            MinimumTrackColor="purple"
+            ValueChanged="EntryExperience_ValueChanged">
+        </Slider>
+        <Label
+            x:Name="EntryExperienceValue"
+            Text="Your Experience : 0"
+            TextColor="purple">
+        </Label>
+    
+    <!-- Dependents -->
+        <Label
+            Text="Number of Dependents"
+            FontSize="Header"
+            TextColor="purple">
+        </Label>
+        <Stepper
+            x:Name="EntryDependent"
+            Minimum="0"
+            Maximum="10"
+            Increment="1"
+            ValueChanged="EntryDependent_ValueChanged">
+        </Stepper>
+        <Label
+            x:Name="EntryDependentValue"
+            Text="Number of Dependents is : 0"
+            TextColor="purple">
+        </Label>
+    
+    <!-- Sumbit Button -->
+        <Button
+            Text="Sumbit"
+            TextColor="pink"
+            BackgroundColor="purple"
+            Clicked="Button_Clicked">
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
